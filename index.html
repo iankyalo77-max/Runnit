@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUNNIT — You Ask. We Run It.</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080808;
+  color: white;
+  line-height: 1.6;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #080808;
+  border-bottom: 1px solid #292929;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.gold {
+  color: #d4af37;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #2a2416, #080808 60%);
+}
+
+.hero h1 {
+  font-size: clamp(55px, 13vw, 100px);
+  letter-spacing: 5px;
+}
+
+.hero h2 {
+  color: #d4af37;
+  margin: 20px 0;
+  font-size: clamp(22px, 5vw, 35px);
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #bbb;
+  font-size: 17px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  margin: 7px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #d4af37;
+  color: #080808;
+}
+
+.secondary {
+  border: 1px solid #d4af37;
+  color: white;
+}
+
+section {
+  padding: 70px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.intro {
+  text-align: center;
+  color: #aaa;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #131313;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.card:hover {
+  border-color: #d4af37;
+}
+
+.icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.request {
+  background: #111;
+}
+
+form {
+  max-width: 650px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #ccc;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  background: #080808;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #292929;
+  color: #888;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #080808;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media(max-width: 800px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav a {
+    display: none;
+  }
+}
+
+@media(max-width: 500px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 75px 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <div class="logo">RUNN<span class="gold">IT</span></div>
+
+  <div>
+    <a href="#services">Services</a>
+    <a href="#request">Request</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</header>
+
+<section class="hero">
+<div class="container">
+
+  <h1>RUNN<span class="gold">IT</span></h1>
+
+  <h2>You Ask. We Run It.</h2>
+
+  <p>
+    From shopping and store pickups to document deliveries
+    and everyday errands, RUNNIT helps get things done
+    across Nairobi & Environs.
+  </p>
+
+  <div class="buttons">
+    <a class="btn primary" href="#request">
+      Request an Errand
+    </a>
+
+    <a class="btn secondary"
+       href="https://wa.me/254780733737">
+      WhatsApp Us
+    </a>
+  </div>
+
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<h2 class="section-title">What We Run</h2>
+
+<p class="intro">
+  Tell us what needs to be done and we'll help get it moving.
+</p>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">🛍️</div>
+<h3>Shopping Errands</h3>
+<p>
+Need something bought? Send us the details
+and we'll handle the trip.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📦</div>
+<h3>Store Pickup</h3>
+<p>
+We'll pick up your order from a store
+and deliver it to your preferred location.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Document Delivery</h3>
+<p>
+Convenient document and small-item
+drop-offs for homes and offices.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏃</div>
+<h3>General Errands</h3>
+<p>
+Have a task that needs running?
+Tell us what you need done.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="request" id="request">
+
+<div class="container">
+
+<h2 class="section-title">
+Request a Run
+</h2>
+
+<p class="intro">
+Fill in the details below and send your request
+directly to RUNNIT on WhatsApp.
+</p>
+
+<form id="requestForm">
+
+<label>Your Name</label>
+<input id="name" type="text" placeholder="Your name" required>
+
+<label>Service</label>
+
+<select id="service" required>
+
+<option value="">
+Choose a service
+</option>
+
+<option>
+Shopping Errand
+</option>
+
+<option>
+Store Pickup
+</option>
+
+<option>
+Document Delivery
+</option>
+
+<option>
+General Errand
+</option>
+
+</select>
+
+<label>Pickup Location</label>
+
+<input
+id="pickup"
+type="text"
+placeholder="Where should we pick up?"
+required
+>
+
+<label>Drop-off Location</label>
+
+<input
+id="dropoff"
+type="text"
+placeholder="Where should we deliver?"
+required
+>
+
+<label>Details</label>
+
+<textarea
+id="details"
+placeholder="Tell us what needs to be done..."
+></textarea>
+
+<button type="submit">
+Send Request on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2 class="section-title">
+Need Something Run?
+</h2>
+
+<p class="intro">
+Message RUNNIT and let's get it moving.
+</p>
+
+<a
+class="btn primary"
+href="https://wa.me/254780733737"
+>
+Chat on WhatsApp
+</a>
+
+<p style="margin-top:20px;color:#aaa;">
+0780 733 737
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="logo">
+RUNN<span class="gold">IT</span>
+</div>
+
+<p>
+You Ask. We Run It. • Nairobi & Environs
+</p>
+
+<p style="margin-top:10px;">
+© 2026 RUNNIT
+</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/254780733737"
+>
+WA
+</a>
+
+<script>
+
+document
+.getElementById("requestForm")
+.addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const service =
+document.getElementById("service").value;
+
+const pickup =
+document.getElementById("pickup").value;
+
+const dropoff =
+document.getElementById("dropoff").value;
+
+const details =
+document.getElementById("details").value;
+
+const message =
+`Hi RUNNIT! I'd like to request an errand.
+
+Name: ${name}
+
+Service: ${service}
+
+Pickup: ${pickup}
+
+Drop-off: ${dropoff}
+
+Details: ${details}`;
+
+const url =
+"https://wa.me/254780733737?text="
++ encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
